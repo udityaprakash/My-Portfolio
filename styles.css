@@ -2,10 +2,14 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 70vh;
     margin: 1vh 0vh;
 }
 body{
     background-image: url("background.jpg");
+    background-size: cover;
+    margin: 0%;
+    z-index: 90;
 }
 .navbar ul li{
     padding: 2vh;
@@ -21,11 +25,14 @@ body{
     background-color: #112D4E;
     color: white;
     padding: 10px;
+    z-index: 100;
     border-radius: 0% 100% 49% 51% / 0% 0% 100% 100% ;
     transition: 0.3s ease-in-out ;
+    box-shadow: 0px 2px 5px rgba(39, 21, 0, 0.629);
 }
 .navbar ul li a:hover{
     box-shadow: 0px 5px 5px rgba(39, 21, 0, 0.629) ;
+    text-decoration: underline;
 }
 .navbar ul li a:active{
     opacity: 0.7;
@@ -33,15 +40,40 @@ body{
 .navbar{
     width: 100%;
     height: 5vh;
+    z-index: 97;
     background-color:#3F72AF ;
-}
-body{
-    background-color: whitesmoke;
-    margin: 0%;
+    box-shadow: 0px 5px 5px rgba(39, 21, 0, 0.629) ;
 }
 .pinning{
     position: fixed;
     top:0;
+}
+.hi{
+    text-align: left;
+    padding: 10%;
+}
+.circles{
+    display: flex;
+    flex-direction: row;
+}
+.circles div{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: black;
+    margin: 10px;
+}
+.homecontent{
+    position: absolute;
+    z-index: 96;
+    top:30%;
+    left:10%;
+    height: 50vh;
+    width: 50vh;
+    margin-right: 10px;
+    border-bottom: 5px solid white;
+    background-color: #3F72AF;
+    text-align: center;
 }
 .divbox{
     min-height: 100vh;
@@ -54,23 +86,37 @@ body{
     margin-right: auto;
     width: 100%;
     border-radius: 0% 0% 45% 45%;
+    box-shadow: 0px 5px 20px rgba(39, 21, 0, 0.629);
 }
 .homeimg{
     /* border-radius: 0% 100% 100% 0% / 100% 50% 50% 0% ; */
 }
-/* .fr{
+.fr{
     display: flex;
     flex-direction: row;
-} */
+    height: 100vh;
+}
 .frdiv{
-    z-index: 100;
+    z-index: 98;
     position: absolute;
     left: 70%;
     width: 20%;
-    overflow: hidden;
-    border-radius: 0% 0% 45% 45%;
-    height:50vh;
+    /* overflow: hidden; */
+    /* border-radius: 0% 0% 45% 45%; */
+    /* height:50vh; */
+    /* box-shadow: 0px 2px 10px rgba(39, 21, 0, 0.629); */
 }
-@media screen and (max-width:500px){
+@media (max-width:700px){
+    .frdiv{
+        box-shadow: 0px;
+    }
+    .navbar ul{
+        width: 50vh;
+        flex-direction: column;
+        /* display: none; */
+    }
+    .navbar ul li a{
+        border-radius: 0px;
+    }
     
 }
