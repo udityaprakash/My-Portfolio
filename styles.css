@@ -11,6 +11,9 @@ body{
     margin: 0%;
     z-index: 90;
 }
+#nav-check , #nav-check + label+ span{
+    opacity: 0;
+}
 .navbar ul li{
     padding: 2vh;
 }
@@ -125,7 +128,7 @@ body{
     }
     .navbar ul{
         width: 40%;
-        margin: 4vh 0vh;
+        margin: 2vh 0vh;
         background-color: #112D4E;
     }
     .frdiv{
@@ -139,6 +142,12 @@ body{
         top:35%;
         left:10%;
 
+    }
+    #nav-check + label {
+        opacity: 0;
+    }
+    #nav-check:checked + label{
+        opacity: 1;
     }
     
 }
@@ -169,8 +178,14 @@ body{
     }
     .navbar ul{
         width: 40%;
-        margin: 4vh 0vh;
+        margin: 2vh 0vh;
         background-color: #112D4E;
+    }
+    #nav-check + label {
+        opacity: 0;
+    }
+    #nav-check:checked + label{
+        opacity: 1;
     }
 
 }
